@@ -8,9 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4647E9CBBF40B855379567D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AFB440056E3F7E0C1FF375 /* libPods.a */; };
+		D52FCD091C27F8FD005D07E8 /* UIImage+image.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD081C27F8FD005D07E8 /* UIImage+image.swift */; };
+		D52FCD0B1C27F918005D07E8 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD0A1C27F918005D07E8 /* UIView+Frame.swift */; };
+		D52FCD0D1C27F944005D07E8 /* UIBarButtonItem+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52FCD0C1C27F944005D07E8 /* UIBarButtonItem+Item.swift */; };
+		D543C61D1C27D07B001C27C9 /* GHTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C61C1C27D07B001C27C9 /* GHTabBarController.swift */; };
+		D543C6201C27D14D001C27C9 /* GHHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C61F1C27D14D001C27C9 /* GHHomeViewController.swift */; };
+		D543C6231C27D37F001C27C9 /* GHTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6221C27D37F001C27C9 /* GHTabBar.swift */; };
+		D543C6261C27E9BC001C27C9 /* GHDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6251C27E9BC001C27C9 /* GHDiscoverViewController.swift */; };
+		D543C6291C27EA17001C27C9 /* GHSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6281C27EA17001C27C9 /* GHSearchBar.swift */; };
+		D543C62B1C27EA86001C27C9 /* GHOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C62A1C27EA86001C27C9 /* GHOneViewController.swift */; };
+		D543C62E1C27EACC001C27C9 /* GHCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C62D1C27EACC001C27C9 /* GHCover.swift */; };
+		D543C6301C27EAEE001C27C9 /* GHPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C62F1C27EAEE001C27C9 /* GHPopMenu.swift */; };
+		D543C6321C27EB17001C27C9 /* GHTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6311C27EB17001C27C9 /* GHTitleButton.swift */; };
+		D543C6341C27EB7B001C27C9 /* GHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6331C27EB7B001C27C9 /* GHNavigationController.swift */; };
+		D543C6361C27EBC5001C27C9 /* GHTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6351C27EBC5001C27C9 /* GHTabBarButton.swift */; };
+		D543C6381C27EBEF001C27C9 /* GHBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */; };
+		D543C63D1C27EC6B001C27C9 /* GHMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */; };
+		D543C6401C27EE56001C27C9 /* GHProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */; };
 		D5F0CF491C27C91500154D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0CF481C27C91500154D90 /* AppDelegate.swift */; };
-		D5F0CF4B1C27C91500154D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0CF4A1C27C91500154D90 /* ViewController.swift */; };
-		D5F0CF4E1C27C91500154D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0CF4C1C27C91500154D90 /* Main.storyboard */; };
 		D5F0CF501C27C91500154D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0CF4F1C27C91500154D90 /* Assets.xcassets */; };
 		D5F0CF531C27C91500154D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0CF511C27C91500154D90 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,10 +34,25 @@
 		0A3BE5EF399AE4021E8B6FB3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55AFB440056E3F7E0C1FF375 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F7F11477C4CFED286988A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D52FCD081C27F8FD005D07E8 /* UIImage+image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+image.swift"; sourceTree = "<group>"; };
+		D52FCD0A1C27F918005D07E8 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		D52FCD0C1C27F944005D07E8 /* UIBarButtonItem+Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Item.swift"; sourceTree = "<group>"; };
+		D543C61C1C27D07B001C27C9 /* GHTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHTabBarController.swift; sourceTree = "<group>"; };
+		D543C61F1C27D14D001C27C9 /* GHHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHHomeViewController.swift; sourceTree = "<group>"; };
+		D543C6221C27D37F001C27C9 /* GHTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHTabBar.swift; sourceTree = "<group>"; };
+		D543C6251C27E9BC001C27C9 /* GHDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHDiscoverViewController.swift; sourceTree = "<group>"; };
+		D543C6281C27EA17001C27C9 /* GHSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHSearchBar.swift; sourceTree = "<group>"; };
+		D543C62A1C27EA86001C27C9 /* GHOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHOneViewController.swift; sourceTree = "<group>"; };
+		D543C62D1C27EACC001C27C9 /* GHCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHCover.swift; sourceTree = "<group>"; };
+		D543C62F1C27EAEE001C27C9 /* GHPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHPopMenu.swift; sourceTree = "<group>"; };
+		D543C6311C27EB17001C27C9 /* GHTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHTitleButton.swift; sourceTree = "<group>"; };
+		D543C6331C27EB7B001C27C9 /* GHNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHNavigationController.swift; sourceTree = "<group>"; };
+		D543C6351C27EBC5001C27C9 /* GHTabBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHTabBarButton.swift; sourceTree = "<group>"; };
+		D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHBadgeView.swift; sourceTree = "<group>"; };
+		D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHMessageViewController.swift; sourceTree = "<group>"; };
+		D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHProfileViewController.swift; sourceTree = "<group>"; };
 		D5F0CF451C27C91500154D90 /* WeCanne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCanne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0CF481C27C91500154D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D5F0CF4A1C27C91500154D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D5F0CF4D1C27C91500154D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5F0CF4F1C27C91500154D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5F0CF521C27C91500154D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5F0CF541C27C91500154D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +70,154 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D52FCD061C27F8C6005D07E8 /* kuanzhan */ = {
+			isa = PBXGroup;
+			children = (
+				D52FCD081C27F8FD005D07E8 /* UIImage+image.swift */,
+				D52FCD0A1C27F918005D07E8 /* UIView+Frame.swift */,
+				D52FCD0C1C27F944005D07E8 /* UIBarButtonItem+Item.swift */,
+			);
+			name = kuanzhan;
+			sourceTree = "<group>";
+		};
+		D543C6151C27CDF2001C27C9 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				D543C6271C27E9EA001C27C9 /* V */,
+				D543C6241C27E987001C27C9 /* C */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
+		D543C6161C27CE0A001C27C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D543C62C1C27EA9D001C27C9 /* V */,
+				D543C61E1C27D11C001C27C9 /* C */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		D543C6171C27CE29001C27C9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D543C61B1C27D03E001C27C9 /* C */,
+				D543C6211C27D352001C27C9 /* V */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		D543C6181C27CE39001C27C9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				D543C63B1C27EC2B001C27C9 /* C */,
+				D543C63A1C27EC23001C27C9 /* V */,
+				D543C6391C27EC1B001C27C9 /* M */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		D543C6191C27CE92001C27C9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D52FCD061C27F8C6005D07E8 /* kuanzhan */,
+				D5F0CF481C27C91500154D90 /* AppDelegate.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		D543C61A1C27CFE0001C27C9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D543C63E1C27EE39001C27C9 /* C */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		D543C61B1C27D03E001C27C9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D543C61C1C27D07B001C27C9 /* GHTabBarController.swift */,
+				D543C6331C27EB7B001C27C9 /* GHNavigationController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		D543C61E1C27D11C001C27C9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D543C61F1C27D14D001C27C9 /* GHHomeViewController.swift */,
+				D543C62A1C27EA86001C27C9 /* GHOneViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		D543C6211C27D352001C27C9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D543C6221C27D37F001C27C9 /* GHTabBar.swift */,
+				D543C6351C27EBC5001C27C9 /* GHTabBarButton.swift */,
+				D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		D543C6241C27E987001C27C9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D543C6251C27E9BC001C27C9 /* GHDiscoverViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		D543C6271C27E9EA001C27C9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D543C6281C27EA17001C27C9 /* GHSearchBar.swift */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		D543C62C1C27EA9D001C27C9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D543C62D1C27EACC001C27C9 /* GHCover.swift */,
+				D543C62F1C27EAEE001C27C9 /* GHPopMenu.swift */,
+				D543C6311C27EB17001C27C9 /* GHTitleButton.swift */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		D543C6391C27EC1B001C27C9 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = M;
+			sourceTree = "<group>";
+		};
+		D543C63A1C27EC23001C27C9 /* V */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
+		D543C63B1C27EC2B001C27C9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		D543C63E1C27EE39001C27C9 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
 		D5F0CF3C1C27C91500154D90 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +239,12 @@
 		D5F0CF471C27C91500154D90 /* WeCanne */ = {
 			isa = PBXGroup;
 			children = (
-				D5F0CF481C27C91500154D90 /* AppDelegate.swift */,
-				D5F0CF4A1C27C91500154D90 /* ViewController.swift */,
-				D5F0CF4C1C27C91500154D90 /* Main.storyboard */,
+				D543C6151C27CDF2001C27C9 /* Discover */,
+				D543C6161C27CE0A001C27C9 /* Home */,
+				D543C6171C27CE29001C27C9 /* Main */,
+				D543C6181C27CE39001C27C9 /* Message */,
+				D543C61A1C27CFE0001C27C9 /* Profile */,
+				D543C6191C27CE92001C27C9 /* Other */,
 				D5F0CF4F1C27C91500154D90 /* Assets.xcassets */,
 				D5F0CF511C27C91500154D90 /* LaunchScreen.storyboard */,
 				D5F0CF541C27C91500154D90 /* Info.plist */,
@@ -152,7 +333,6 @@
 			files = (
 				D5F0CF531C27C91500154D90 /* LaunchScreen.storyboard in Resources */,
 				D5F0CF501C27C91500154D90 /* Assets.xcassets in Resources */,
-				D5F0CF4E1C27C91500154D90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,22 +391,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F0CF4B1C27C91500154D90 /* ViewController.swift in Sources */,
+				D543C62B1C27EA86001C27C9 /* GHOneViewController.swift in Sources */,
+				D543C6301C27EAEE001C27C9 /* GHPopMenu.swift in Sources */,
+				D543C6361C27EBC5001C27C9 /* GHTabBarButton.swift in Sources */,
+				D543C6231C27D37F001C27C9 /* GHTabBar.swift in Sources */,
+				D543C6381C27EBEF001C27C9 /* GHBadgeView.swift in Sources */,
+				D52FCD0B1C27F918005D07E8 /* UIView+Frame.swift in Sources */,
+				D543C6261C27E9BC001C27C9 /* GHDiscoverViewController.swift in Sources */,
+				D543C6291C27EA17001C27C9 /* GHSearchBar.swift in Sources */,
+				D543C6341C27EB7B001C27C9 /* GHNavigationController.swift in Sources */,
+				D543C6201C27D14D001C27C9 /* GHHomeViewController.swift in Sources */,
+				D543C61D1C27D07B001C27C9 /* GHTabBarController.swift in Sources */,
+				D543C62E1C27EACC001C27C9 /* GHCover.swift in Sources */,
+				D543C6401C27EE56001C27C9 /* GHProfileViewController.swift in Sources */,
+				D52FCD0D1C27F944005D07E8 /* UIBarButtonItem+Item.swift in Sources */,
 				D5F0CF491C27C91500154D90 /* AppDelegate.swift in Sources */,
+				D52FCD091C27F8FD005D07E8 /* UIImage+image.swift in Sources */,
+				D543C6321C27EB17001C27C9 /* GHTitleButton.swift in Sources */,
+				D543C63D1C27EC6B001C27C9 /* GHMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D5F0CF4C1C27C91500154D90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D5F0CF4D1C27C91500154D90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D5F0CF511C27C91500154D90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        // 创建窗口
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        // 创建tabBarVc
+        let tabBarC = GHTabBarController()
+        
+        // 设置窗口的根控制器
+        self.window!.rootViewController = tabBarC
+        
+        // 显示窗口
+        self.window?.makeKeyAndVisible()
+        // makeKeyAndVisible底层实现
+        // 1. application.keyWindow = self.window
+        // 2. self.window.hidden = NO;
+
         return true
     }
 
