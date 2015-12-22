@@ -22,33 +22,51 @@ class GHTabBarButton: UIButton {
             // KVO：时刻监听一个对象的属性有没有改变
             // 给谁添加观察者
             // Observer:按钮
-            item?.addObserver(self, forKeyPath: "title", options: .New, context: nil)
-            item?.addObserver(self, forKeyPath: "image", options: .New, context: nil)
-            item?.addObserver(self, forKeyPath: "selectedImage", options: .New, context: nil)
-            item?.addObserver(self, forKeyPath: "badgeValue", options: .New, context: nil)
+            item!.addObserver(self, forKeyPath: "title", options: .New, context: nil)
+            item!.addObserver(self, forKeyPath: "image", options: .New, context: nil)
+            item!.addObserver(self, forKeyPath: "selectedImage", options: .New, context: nil)
+            item!.addObserver(self, forKeyPath: "badgeValue", options: .New, context: nil)
             
         }
     }
     
-    lazy var badgeView:GHBadgeView? = {
+    lazy var badgeView:GHBadgeView = {
         let btn = GHBadgeView(type: .Custom)
+        
         self.addSubview(btn)
         return btn
 
     }()
     
-    func sFrame(frame:CGRect) -> GHTabBarButton{
-        let btn = GHTabBarButton(frame: frame)
-        //设置颜色
-        btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
-        btn.setTitleColor(UIColor.orangeColor(), forState: .Selected)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        self.setTitleColor(UIColor.orangeColor(), forState: .Selected)
         
         //图片居中
-        btn.imageView?.contentMode = .Center
-        btn.titleLabel?.textAlignment = .Center
-        btn.titleLabel?.font = UIFont.systemFontOfSize(12)
-        return btn
+        self.imageView?.contentMode = .Center
+        self.titleLabel?.textAlignment = .Center
+        self.titleLabel?.font = UIFont.systemFontOfSize(12)
     }
+    
+    
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+//    func sFrame(frame:CGRect) -> GHTabBarButton{
+//        let btn = GHTabBarButton(frame: frame)
+//        //设置颜色
+//        btn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+//        btn.setTitleColor(UIColor.orangeColor(), forState: .Selected)
+//        
+//        //图片居中
+//        btn.imageView?.contentMode = .Center
+//        btn.titleLabel?.textAlignment = .Center
+//        btn.titleLabel?.font = UIFont.systemFontOfSize(12)
+//        return btn
+//    }
     
     // 只要监听的属性一有新值，就会调用
     override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
@@ -57,8 +75,11 @@ class GHTabBarButton: UIButton {
         self.setImage(self.item?.selectedImage, forState: .Selected)
         
         // 设置badgeValue
-//        self.badgeView?.badgeValue = (self.item?.badgeValue)!
-
+        if self.item!.badgeValue == nil{
+            self.badgeView.badgeValue = ""
+        }else{
+            self.badgeView.badgeValue = self.item!.badgeValue!
+        }
     }
     
     // 修改按钮内部子控件的frame
@@ -81,8 +102,8 @@ class GHTabBarButton: UIButton {
         self.titleLabel!.frame = CGRectMake(titleX, titleY, titleW, titleH);
         
         // 3.badgeView
-        self.badgeView!.x = self.width! - self.badgeView!.width! - 10;
-        self.badgeView!.y = 0;
+        self.badgeView.x = self.width! - self.badgeView.width! - 10;
+        self.badgeView.y = 0;
 
     }
     
