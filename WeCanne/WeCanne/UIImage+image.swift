@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 extension UIImage{
-    func imageWithOriginalName (name:String) -> UIImage{
+    class func imageWithOriginalName (name:String) -> UIImage{
 
         return UIImage(named: name)!.imageWithRenderingMode(.AlwaysOriginal)
     }
     
-    func imageWithStretchableName (name:String) -> UIImage{
+    class func imageWithStretchableName (name:String) -> UIImage{
         let image = UIImage(named: name)!
-        return image.resizableImageWithCapInsets(UIEdgeInsetsMake(10, 10, 10, 10))
+        return image.resizableImageWithCapInsets(UIEdgeInsetsMake(image.size.height * 0.5, image.size.width * 0.5, 10, 10))
 //        (image.size.width * 0.5, topCapHeight: image.size.height * 0.5)
     }
 }

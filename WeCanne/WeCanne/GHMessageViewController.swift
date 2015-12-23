@@ -12,12 +12,13 @@ class GHMessageViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let chat = UIBarButtonItem(title: "发起聊天", style: .Bordered, target: self, action: "char")
+        self.navigationItem.rightBarButtonItem = chat
+       
+    }
+    func char(){
+        print("char")
+        
     }
 
     override func didReceiveMemoryWarning() {

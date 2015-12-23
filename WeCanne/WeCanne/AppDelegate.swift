@@ -8,7 +8,10 @@
 
 import UIKit
 
+let GHKeyWindow = UIApplication.sharedApplication().keyWindow!
+
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

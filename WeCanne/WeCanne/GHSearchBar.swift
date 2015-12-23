@@ -10,12 +10,20 @@ import UIKit
 
 class GHSearchBar: UITextField {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.font = UIFont.systemFontOfSize(13)
+        self.background = UIImage.imageWithStretchableName("searchbar_textfield_background")
+        
+        let imageV = UIImageView(image: UIImage(named: "searchbar_textfield_search_icon"))
+        imageV.width = imageV.width! + 10
+        imageV.contentMode = .Center
+        self.leftView = imageV
+        self.leftViewMode = .Always
+        
     }
-    */
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

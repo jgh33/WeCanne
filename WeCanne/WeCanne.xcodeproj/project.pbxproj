@@ -92,8 +92,8 @@
 		D543C6161C27CE0A001C27C9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D543C62C1C27EA9D001C27C9 /* V */,
 				D543C61E1C27D11C001C27C9 /* C */,
+				D543C62C1C27EA9D001C27C9 /* V */,
 			);
 			name = Home;
 			sourceTree = "<group>";

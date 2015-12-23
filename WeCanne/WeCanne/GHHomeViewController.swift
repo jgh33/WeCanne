@@ -8,21 +8,79 @@
 
 import UIKit
 
-class GHHomeViewController: UITableViewController {
-
+class GHHomeViewController: UITableViewController, GHCoverDelegate{
+    
+    var titleButton:GHTitleButton!
+    lazy var one:GHOneViewController = GHOneViewController()
+    
+    // UIBarButtonItem:决定导航条上按钮的内容
+    // UINavigationItem:决定导航条上内容
+    // UITabBarItem:决定tabBar上按钮的内容
+    // ios7之后，会把tabBar上和导航条上的按钮渲染
+    // 导航条上自定义按钮的位置是由系统决定，尺寸才需要自己设置。
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.setUpNavgationBar()    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - 设置导航条_____________________________________
+    func setUpNavgationBar(){
+        //zuo
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.barButtonItemWithImage(UIImage(named: "navigationbar_friendsearch")!, highImage: UIImage(named: "navigationbar_friendsearch_highlighted")!, target: self, action: "friendsearch", controlEvents: .TouchUpInside)
+        //you
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.barButtonItemWithImage(UIImage(named: "navigationbar_pop")!, highImage: UIImage(named: "navigationbar_pop_highlighted")!, target: self, action: "pop", controlEvents: .TouchUpInside)
+        
+        // titleView
+        self.titleButton = GHTitleButton(type: .Custom)
+        self.titleButton.setTitle("首页", forState: .Normal)
+        self.titleButton.setImage(UIImage(named: "navigationbar_arrow_up"), forState: .Normal)
+        self.titleButton.setImage(UIImage(named: "navigationbar_arrow_down"), forState: .Selected)
+        
+        
+        // 高亮的时候不需要调整图片
+        self.titleButton.adjustsImageWhenHighlighted = false
+        self.titleButton.addTarget(self, action: "titleClick:", forControlEvents: .TouchUpInside)
+        self.navigationItem.titleView = self.titleButton
+    }
+    
+//    / 以后只要显示在最前面的控件，一般都加在主窗口
+    // 点击标题按钮
+    func titleClick(button:UIButton){
+        button.selected = !button.selected
+        // 弹出蒙板
+        let cover = GHCover()
+        cover.delegate = self
+        // 弹出pop菜单
+        let popW:CGFloat = 200
+        let popX = (self.view.width! - 200) * 0.5
+        let popH = popW
+        let popY:CGFloat = 55
+        let menu = GHPopMenu(showInRect: CGRectMake(popX, popY, popW, popH))
+        menu.contentView = self.one.view
+
+        
+    }
+    
+    // 点击蒙板的时候调用
+    func coverDidClickCover(cover: GHCover) {
+        // 隐藏pop菜单
+        GHPopMenu.hide()
+        self.titleButton.selected = false
+    }
+    
+    func friendsearch(){
+        
+    }
+    
+    func pop(){
+        self.titleButton.setImage(nil , forState: .Normal)
+        
     }
 
     // MARK: - Table view data source

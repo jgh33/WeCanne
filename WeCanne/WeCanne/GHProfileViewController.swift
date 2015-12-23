@@ -13,11 +13,12 @@ class GHProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let setting = UIBarButtonItem(title: "设置", style: .Bordered, target: self, action: "setting")
+        self.navigationItem.rightBarButtonItem = setting
+    }
+    //MARK: - 点击设置的时候调用
+    func setting(){
+        
     }
 
     override func didReceiveMemoryWarning() {

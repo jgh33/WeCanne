@@ -13,11 +13,8 @@ class GHOneViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.tableView.separatorStyle = .None
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,25 +24,33 @@ class GHOneViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellID = "reuseIdentifier"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellID)
 
         // Configure the cell...
 
-        return cell
+        
+        if cell == nil{
+            cell = UITableViewCell(style: .Default, reuseIdentifier:cellID)
+            cell!.backgroundColor = UIColor.clearColor()
+            cell!.textLabel!.text = "\(indexPath.row)"
+        }
+        
+        return cell!
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

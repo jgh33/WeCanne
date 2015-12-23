@@ -41,13 +41,13 @@ extension UIView{
             
         }
     }
-    var hight:CGFloat?{
+    var height:CGFloat?{
         get{
             return self.frame.size.height
         }
         set{
             var frames = self.frame
-            frames.size.width = hight!
+            frames.size.width = height!
             self.frame = frames
             
         }
