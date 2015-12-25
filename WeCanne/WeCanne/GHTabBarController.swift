@@ -22,12 +22,21 @@ class GHTabBarController: UITabBarController ,GHTabBarDelegate{
         createAllChildViewController()
         setUpTabBar()
     }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        //移除系统的tabbar的item
+        for tabbarBtn in self.tabBar.subviews{
+            if tabbarBtn.isKindOfClass(NSClassFromString("UITabBarButton")!){
+                tabbarBtn.removeFromSuperview()
+            }
+        }
+    }
     
 //MARK: - 设置tabBar
     func setUpTabBar()
     {
     // 自定义tabBar
-        let tabBar = GHTabBar(frame:self.tabBar.frame)
+        let tabBar = GHTabBar(frame:self.tabBar.bounds)
     tabBar.backgroundColor = UIColor.whiteColor()
     // 设置代理
     tabBar.delegate = self;
@@ -36,10 +45,10 @@ class GHTabBarController: UITabBarController ,GHTabBarDelegate{
     tabBar.items = self.items;
     
     // 添加自定义tabBar
-    self.view.addSubview(tabBar)
+    self.tabBar.addSubview(tabBar)
     
-    // 移除系统的tabBar
-    self.tabBar.removeFromSuperview()
+//    // 移除系统的tabBar
+//    self.tabBar.removeFromSuperview()
     }
     
 //MARK: - 当点击tabBar上的按钮调用

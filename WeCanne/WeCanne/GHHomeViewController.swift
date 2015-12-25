@@ -79,8 +79,14 @@ class GHHomeViewController: UITableViewController, GHCoverDelegate{
     }
     
     func pop(){
-        self.titleButton.setImage(nil , forState: .Normal)
+//        self.titleButton.setImage(nil , forState: .Normal)
+        let one = GHOneViewController()
+        //当push的时候隐藏底部条（系统自带的）
+        one.hidesBottomBarWhenPushed = true
         
+        //跳转到另一个控制器
+        self.navigationController?.pushViewController(one, animated: true)
+
     }
 
     // MARK: - Table view data source

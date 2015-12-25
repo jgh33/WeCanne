@@ -8,48 +8,58 @@
 
 import UIKit
 
-class GHOneViewController: UITableViewController {
+class GHOneViewController: UIViewController {
 
+    //init会调用initWithNibName
+    //控件的init会调用initWithFrame
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
 
-        self.tableView.separatorStyle = .None
+//        self.tableView.separatorStyle = .None
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func jump2Two(sender: AnyObject) {
+        let two = GHViewController()
+        self.navigationController?.pushViewController(two, animated: true)
     }
+    
 
-    // MARK: - Table view data source
-
-//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
 //    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
-
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellID = "reuseIdentifier"
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellID)
-
-        // Configure the cell...
-
-        
-        if cell == nil{
-            cell = UITableViewCell(style: .Default, reuseIdentifier:cellID)
-            cell!.backgroundColor = UIColor.clearColor()
-            cell!.textLabel!.text = "\(indexPath.row)"
-        }
-        
-        return cell!
-    }
+//
+//    // MARK: - Table view data source
+//
+////    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+////        // #warning Incomplete implementation, return the number of sections
+////        return 0
+////    }
+//
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 3
+//    }
+//
+//
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cellID = "reuseIdentifier"
+//        var cell = tableView.dequeueReusableCellWithIdentifier(cellID)
+//
+//        // Configure the cell...
+//
+//        
+//        if cell == nil{
+//            cell = UITableViewCell(style: .Default, reuseIdentifier:cellID)
+//            cell!.backgroundColor = UIColor.clearColor()
+//            cell!.textLabel!.text = "\(indexPath.row)"
+//        }
+//        
+//        return cell!
+//    }
 
 
     /*

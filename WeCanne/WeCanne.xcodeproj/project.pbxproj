@@ -25,6 +25,9 @@
 		D543C6381C27EBEF001C27C9 /* GHBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */; };
 		D543C63D1C27EC6B001C27C9 /* GHMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */; };
 		D543C6401C27EE56001C27C9 /* GHProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */; };
+		D5CAD7461C2D78E2000B411E /* GHOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */; };
+		D5CAD7491C2D7F8D000B411E /* GHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD7471C2D7F8D000B411E /* GHViewController.swift */; };
+		D5CAD74A1C2D7F8D000B411E /* GHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7481C2D7F8D000B411E /* GHViewController.xib */; };
 		D5F0CF491C27C91500154D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F0CF481C27C91500154D90 /* AppDelegate.swift */; };
 		D5F0CF501C27C91500154D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F0CF4F1C27C91500154D90 /* Assets.xcassets */; };
 		D5F0CF531C27C91500154D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F0CF511C27C91500154D90 /* LaunchScreen.storyboard */; };
@@ -51,6 +54,9 @@
 		D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHBadgeView.swift; sourceTree = "<group>"; };
 		D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHMessageViewController.swift; sourceTree = "<group>"; };
 		D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHProfileViewController.swift; sourceTree = "<group>"; };
+		D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHOneViewController.xib; sourceTree = "<group>"; };
+		D5CAD7471C2D7F8D000B411E /* GHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHViewController.swift; sourceTree = "<group>"; };
+		D5CAD7481C2D7F8D000B411E /* GHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHViewController.xib; sourceTree = "<group>"; };
 		D5F0CF451C27C91500154D90 /* WeCanne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCanne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F0CF481C27C91500154D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F0CF4F1C27C91500154D90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 			children = (
 				D543C61F1C27D14D001C27C9 /* GHHomeViewController.swift */,
 				D543C62A1C27EA86001C27C9 /* GHOneViewController.swift */,
+				D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */,
+				D5CAD7471C2D7F8D000B411E /* GHViewController.swift */,
+				D5CAD7481C2D7F8D000B411E /* GHViewController.xib */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -332,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F0CF531C27C91500154D90 /* LaunchScreen.storyboard in Resources */,
+				D5CAD7461C2D78E2000B411E /* GHOneViewController.xib in Resources */,
 				D5F0CF501C27C91500154D90 /* Assets.xcassets in Resources */,
+				D5CAD74A1C2D7F8D000B411E /* GHViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +418,7 @@
 				D52FCD0D1C27F944005D07E8 /* UIBarButtonItem+Item.swift in Sources */,
 				D5F0CF491C27C91500154D90 /* AppDelegate.swift in Sources */,
 				D52FCD091C27F8FD005D07E8 /* UIImage+image.swift in Sources */,
+				D5CAD7491C2D7F8D000B411E /* GHViewController.swift in Sources */,
 				D543C6321C27EB17001C27C9 /* GHTitleButton.swift in Sources */,
 				D543C63D1C27EC6B001C27C9 /* GHMessageViewController.swift in Sources */,
 			);
