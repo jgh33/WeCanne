@@ -22,6 +22,8 @@ class GHTabBarController: UITabBarController ,GHTabBarDelegate{
         createAllChildViewController()
         setUpTabBar()
     }
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //移除系统的tabbar的item

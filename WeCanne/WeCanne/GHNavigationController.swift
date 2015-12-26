@@ -9,7 +9,7 @@
 import UIKit
 
 class GHNavigationController: UINavigationController ,UINavigationControllerDelegate{
-    var popDelegate:AnyObject?
+    var popDelegate: AnyObject?
     
     override class func initialize(){
         // 获取当前类下面的UIBarButtonItem
@@ -24,6 +24,8 @@ class GHNavigationController: UINavigationController ,UINavigationControllerDele
         super.viewDidLoad()
         
         self.popDelegate = self.interactivePopGestureRecognizer?.delegate
+        
+        self.delegate = self
                // Do any additional setup after loading the view.
     }
     
@@ -52,18 +54,33 @@ class GHNavigationController: UINavigationController ,UINavigationControllerDele
         self.popToRootViewControllerAnimated(true)
     }
     
+    
+    func navigationController(navigationController: UINavigationController, willShowViewController viewController: UIViewController, animated: Bool) {
+
+        //获取住窗口
+        let tabbarC = GHKeyWindow.rootViewController as? UITabBarController
+        
+        //移除系统的tabbar的item
+        for tabbarBtn in tabbarC!.tabBar.subviews{
+            if tabbarBtn.isKindOfClass(NSClassFromString("UITabBarButton")!){
+                tabbarBtn.removeFromSuperview()
+            }
+        }
+
+    }
     func navigationController(navigationController: UINavigationController, didShowViewController viewController: UIViewController, animated: Bool) {
         if (viewController == self.viewControllers[0]) {
             
             self.interactivePopGestureRecognizer?.delegate = self.popDelegate! as? UIGestureRecognizerDelegate
-//            print("add")
+            
             
         }else{
             //实现滑动返回手势
             //清空滑动返回手势代理，就能实现滑动功能(回到根控制器要还原)
             self.interactivePopGestureRecognizer?.delegate = nil
-//            print("delete")
-        }    }
+            print("delete")
+        }
+    }
     
 
     /*
