@@ -16,18 +16,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let GHVersionKey = "version"
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         // 创建窗口
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
-        // 创建tabBarVc
-        let tabBarC = GHTabBarController()
-        
-        // 设置窗口的根控制器
-        self.window!.rootViewController = tabBarC
-        
+        //获取当前版本号
+        let currentVersion = NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String
+//        获取上次的版本号
+        let lastVersion = NSUserDefaults.standardUserDefaults().objectForKey(GHVersionKey) as? String
+        //判断是否进入新特性页面
+        if(currentVersion != lastVersion){
+            let vc = GHCollectionViewController()
+            self.window!.rootViewController = vc
+            
+            //偏好设置
+            NSUserDefaults.standardUserDefaults().setObject(currentVersion, forKey: GHVersionKey)
+        }else{
+            // 创建tabBarVc
+            let tabBarC = GHTabBarController()
+            
+            // 设置窗口的根控制器
+            self.window!.rootViewController = tabBarC
+        }
+       
         // 显示窗口
         self.window?.makeKeyAndVisible()
         // makeKeyAndVisible底层实现

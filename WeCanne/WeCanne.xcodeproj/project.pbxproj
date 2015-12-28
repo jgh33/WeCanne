@@ -25,6 +25,8 @@
 		D543C6381C27EBEF001C27C9 /* GHBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */; };
 		D543C63D1C27EC6B001C27C9 /* GHMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */; };
 		D543C6401C27EE56001C27C9 /* GHProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */; };
+		D54CC3C11C2E8D1F0015EFC7 /* GHCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CC3C01C2E8D1F0015EFC7 /* GHCollectionViewController.swift */; };
+		D54CC3C31C2E936D0015EFC7 /* GHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CC3C21C2E936D0015EFC7 /* GHCollectionViewCell.swift */; };
 		D5CAD7461C2D78E2000B411E /* GHOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */; };
 		D5CAD7491C2D7F8D000B411E /* GHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD7471C2D7F8D000B411E /* GHViewController.swift */; };
 		D5CAD74A1C2D7F8D000B411E /* GHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7481C2D7F8D000B411E /* GHViewController.xib */; };
@@ -54,6 +56,8 @@
 		D543C6371C27EBEF001C27C9 /* GHBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHBadgeView.swift; sourceTree = "<group>"; };
 		D543C63C1C27EC6B001C27C9 /* GHMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHMessageViewController.swift; sourceTree = "<group>"; };
 		D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHProfileViewController.swift; sourceTree = "<group>"; };
+		D54CC3C01C2E8D1F0015EFC7 /* GHCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHCollectionViewController.swift; sourceTree = "<group>"; };
+		D54CC3C21C2E936D0015EFC7 /* GHCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHOneViewController.xib; sourceTree = "<group>"; };
 		D5CAD7471C2D7F8D000B411E /* GHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHViewController.swift; sourceTree = "<group>"; };
 		D5CAD7481C2D7F8D000B411E /* GHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHViewController.xib; sourceTree = "<group>"; };
@@ -227,6 +231,31 @@
 			name = C;
 			sourceTree = "<group>";
 		};
+		D54CC3BD1C2E8CC10015EFC7 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				D54CC3BF1C2E8CFD0015EFC7 /* V */,
+				D54CC3BE1C2E8CF00015EFC7 /* C */,
+			);
+			name = NewFeature;
+			sourceTree = "<group>";
+		};
+		D54CC3BE1C2E8CF00015EFC7 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				D54CC3C01C2E8D1F0015EFC7 /* GHCollectionViewController.swift */,
+			);
+			name = C;
+			sourceTree = "<group>";
+		};
+		D54CC3BF1C2E8CFD0015EFC7 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				D54CC3C21C2E936D0015EFC7 /* GHCollectionViewCell.swift */,
+			);
+			name = V;
+			sourceTree = "<group>";
+		};
 		D5F0CF3C1C27C91500154D90 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +277,7 @@
 		D5F0CF471C27C91500154D90 /* WeCanne */ = {
 			isa = PBXGroup;
 			children = (
+				D54CC3BD1C2E8CC10015EFC7 /* NewFeature */,
 				D543C6151C27CDF2001C27C9 /* Discover */,
 				D543C6161C27CE0A001C27C9 /* Home */,
 				D543C6171C27CE29001C27C9 /* Main */,
@@ -408,9 +438,11 @@
 				D543C6231C27D37F001C27C9 /* GHTabBar.swift in Sources */,
 				D543C6381C27EBEF001C27C9 /* GHBadgeView.swift in Sources */,
 				D52FCD0B1C27F918005D07E8 /* UIView+Frame.swift in Sources */,
+				D54CC3C11C2E8D1F0015EFC7 /* GHCollectionViewController.swift in Sources */,
 				D543C6261C27E9BC001C27C9 /* GHDiscoverViewController.swift in Sources */,
 				D543C6291C27EA17001C27C9 /* GHSearchBar.swift in Sources */,
 				D543C6341C27EB7B001C27C9 /* GHNavigationController.swift in Sources */,
+				D54CC3C31C2E936D0015EFC7 /* GHCollectionViewCell.swift in Sources */,
 				D543C6201C27D14D001C27C9 /* GHHomeViewController.swift in Sources */,
 				D543C61D1C27D07B001C27C9 /* GHTabBarController.swift in Sources */,
 				D543C62E1C27EACC001C27C9 /* GHCover.swift in Sources */,
