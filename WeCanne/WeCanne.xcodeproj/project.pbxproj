@@ -27,6 +27,7 @@
 		D543C6401C27EE56001C27C9 /* GHProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */; };
 		D54CC3C11C2E8D1F0015EFC7 /* GHCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CC3C01C2E8D1F0015EFC7 /* GHCollectionViewController.swift */; };
 		D54CC3C31C2E936D0015EFC7 /* GHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CC3C21C2E936D0015EFC7 /* GHCollectionViewCell.swift */; };
+		D55DD8721C317F0500C64870 /* OauthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55DD8711C317F0500C64870 /* OauthViewController.swift */; };
 		D5CAD7461C2D78E2000B411E /* GHOneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */; };
 		D5CAD7491C2D7F8D000B411E /* GHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CAD7471C2D7F8D000B411E /* GHViewController.swift */; };
 		D5CAD74A1C2D7F8D000B411E /* GHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5CAD7481C2D7F8D000B411E /* GHViewController.xib */; };
@@ -58,6 +59,8 @@
 		D543C63F1C27EE56001C27C9 /* GHProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHProfileViewController.swift; sourceTree = "<group>"; };
 		D54CC3C01C2E8D1F0015EFC7 /* GHCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHCollectionViewController.swift; sourceTree = "<group>"; };
 		D54CC3C21C2E936D0015EFC7 /* GHCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHCollectionViewCell.swift; sourceTree = "<group>"; };
+		D55DD86C1C31350F00C64870 /* WeCanne-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeCanne-Bridging-Header.h"; sourceTree = "<group>"; };
+		D55DD8711C317F0500C64870 /* OauthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OauthViewController.swift; sourceTree = "<group>"; };
 		D5CAD7451C2D78E2000B411E /* GHOneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHOneViewController.xib; sourceTree = "<group>"; };
 		D5CAD7471C2D7F8D000B411E /* GHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GHViewController.swift; sourceTree = "<group>"; };
 		D5CAD7481C2D7F8D000B411E /* GHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GHViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 			children = (
 				D52FCD061C27F8C6005D07E8 /* kuanzhan */,
 				D5F0CF481C27C91500154D90 /* AppDelegate.swift */,
+				D55DD86C1C31350F00C64870 /* WeCanne-Bridging-Header.h */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -256,6 +260,14 @@
 			name = V;
 			sourceTree = "<group>";
 		};
+		D55DD8701C317ED500C64870 /* Oauth */ = {
+			isa = PBXGroup;
+			children = (
+				D55DD8711C317F0500C64870 /* OauthViewController.swift */,
+			);
+			name = Oauth;
+			sourceTree = "<group>";
+		};
 		D5F0CF3C1C27C91500154D90 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +289,7 @@
 		D5F0CF471C27C91500154D90 /* WeCanne */ = {
 			isa = PBXGroup;
 			children = (
+				D55DD8701C317ED500C64870 /* Oauth */,
 				D54CC3BD1C2E8CC10015EFC7 /* NewFeature */,
 				D543C6151C27CDF2001C27C9 /* Discover */,
 				D543C6161C27CE0A001C27C9 /* Home */,
@@ -432,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55DD8721C317F0500C64870 /* OauthViewController.swift in Sources */,
 				D543C62B1C27EA86001C27C9 /* GHOneViewController.swift in Sources */,
 				D543C6301C27EAEE001C27C9 /* GHPopMenu.swift in Sources */,
 				D543C6361C27EBC5001C27C9 /* GHTabBarButton.swift in Sources */,
@@ -558,11 +572,15 @@
 			baseConfigurationReference = 97F7F11477C4CFED286988A6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WeCanne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scau.jgh.WeCanne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeCanne/WeCanne-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -571,11 +589,14 @@
 			baseConfigurationReference = 0A3BE5EF399AE4021E8B6FB3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WeCanne/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scau.jgh.WeCanne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeCanne/WeCanne-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
