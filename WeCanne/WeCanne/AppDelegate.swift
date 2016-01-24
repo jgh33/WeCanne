@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
     var wbToken: String?
     var wbRefreshToken: String?
     var wbCurrentUserID: String?
+//    
+//    var currentAccount:GHAccount?
 
     let GHVersionKey = "version"
 
@@ -123,6 +125,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WeiboSDKDelegate {
             let json = response.userInfo
             let app = json["app"]
             print(app!["name"])
+            
+            //GHAccount保存一次
+            let currentAccount = GHAccount(dict: json)
+            print(currentAccount)
+            print(GHAccountFile)
+            
+            //归档为文件  (一般用业务类保存数据)
+            AccountTool.saveAccount(currentAccount)
+            
+            
             
             //获取用户名,暂时搁置
             //            WBHttpRequest(forUserProfile: self.wbCurrentUserID, withAccessToken: self.wbToken, andOtherProperties: nil, queue: nil, withCompletionHandler: {(httpRequest:WBHttpRequest?, result:AnyObject?, error:NSError?) -> Void in
